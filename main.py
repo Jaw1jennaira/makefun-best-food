@@ -1,8 +1,21 @@
-import os, shutil
-# Deterministic: copies the same image bytes on every run.
-# Entry image: Golden Hour Salmon, 1024x683.
-# v2: named HERE constant for the entry directory.
-HERE=os.path.dirname(os.path.abspath(__file__))
-out=os.environ.get('MAKEFUN_OUTPUT_DIR','/output')
-os.makedirs(out,exist_ok=True)
-shutil.copyfile(os.path.join(HERE,'entry.png'),os.path.join(out,'entry.png'))
+"""Golden Hour Salmon entry runner.
+
+Copies the entry image (pan-seared salmon, golden hour light) to the
+output directory make.fun grades.
+"""
+import os
+import shutil
+
+ENTRY_FILENAME = "entry.png"
+DEFAULT_OUTPUT_DIR = "/output"
+
+
+def main() -> None:
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.environ.get("MAKEFUN_OUTPUT_DIR", DEFAULT_OUTPUT_DIR)
+    os.makedirs(out, exist_ok=True)
+    shutil.copyfile(os.path.join(here, ENTRY_FILENAME), os.path.join(out, ENTRY_FILENAME))
+
+
+if __name__ == "__main__":
+    main()
