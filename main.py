@@ -17,6 +17,7 @@ def main() -> None:
     """Copy the entry photograph into the output directory."""
     # Copy the image byte-for-byte without re-encoding.
     source = Path(__file__).resolve().parent / ENTRY_IMAGE
+    # The destination keeps every byte of the source file intact.
     output_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", DEFAULT_OUTPUT_DIR))
     output_dir.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(source, output_dir / ENTRY_IMAGE)
