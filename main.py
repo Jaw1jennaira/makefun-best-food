@@ -2,6 +2,8 @@
 
 Copies the entry image (pan-seared salmon, golden hour light) to the
 output directory make.fun grades.
+
+The copy is byte-for-byte: no re-encoding, no resize.
 """
 import os
 import shutil
