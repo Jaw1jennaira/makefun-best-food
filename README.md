@@ -1,11 +1,12 @@
 # Golden Hour Salmon — food-picture-01
 
-Pan-seared salmon with crispy golden skin, roasted vegetables and edible
-flowers, shot in golden hour light — our entry for make.fun's
-"Make the best-looking food picture" bounty ($250 in USDC).
+An entry for the make.fun food-picture-01 competition: a plate of
+crispy-skinned pan-seared salmon with roasted vegetables and edible
+flowers, photographed in warm golden hour light.
 
-## How it runs
+## How to run
 
-- `main.py` — Python 3.13, standard library only. It copies `entry.png`
-  into the output directory (`MAKEFUN_OUTPUT_DIR`, default `/output`).
-- `entry.png` — the entry picture, 1024x683.
+Run `python3 main.py`. It copies `entry.png` into the output
+directory (set with `MAKEFUN_OUTPUT_DIR`, default `/output`).
+
+The entry image is 1024x683 pixels.
